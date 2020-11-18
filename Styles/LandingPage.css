@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+h1, h3, p, span, button, label, input {
+  font-family:Helvetica;
+  letter-spacing: 0px;
+}
+
+header {
+  background-color: var(--dark-grey);
+  height: 399px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  clip-path: polygon(
+    100% 0, /* Top left */
+    0 0, /* Top right */
+    0 70%, /* Bottom left */
+    100% 100% /* Bottom right */
+  );
+}
+
+header .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5rem;
+  padding: 20px;
+}
+
+header .content-wrapper h1, header .content-wrapper p {
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+header .content-wrapper h1{
+  font-size: 2.8rem;
+}
+
+header .content-wrapper span {
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.button-wrapper button {
+  color: var(--grey);
+  background: var(--white);
+  border: 1px solid var(--dark-grey);
+  cursor: pointer;
+  box-shadow: 0px 1px 6px #00000029;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px 30px;
+}
+
+.form-section {
+  display: grid;
+  grid-template-columns: 100px 1fr 500px 100px;
+}
+
+section .content-wrapper {
+  grid-column: 2/2;
+}
+
+section .form-wrapper {
+  grid-column: 3/3;
+}
